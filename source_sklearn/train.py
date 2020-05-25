@@ -7,7 +7,7 @@ import pandas as pd
 from sklearn.externals import joblib
 
 ## TODO: Import any additional libraries you need to define a model
-
+from sklearn.linear_model import LogisticRegression
 
 # Provided model load function
 def model_fn(model_dir):
@@ -53,14 +53,12 @@ if __name__ == '__main__':
     
     
     ## --- Your code here --- ##
-    
 
     ## TODO: Define a model 
-    model = None
-    
+    model = LogisticRegression(random_state=0)
     
     ## TODO: Train the model
-    
+    model.fit(train_x, train_y)
     
     
     ## --- End of your code  --- ##
